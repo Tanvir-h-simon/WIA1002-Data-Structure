@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+/* import java.util.ArrayList;
 
 public class Stack<E> {
     private ArrayList<E> list;
@@ -44,4 +44,4 @@ public class Stack<E> {
     public String toString() {
         return list.toString();
     }
-}
+} */ 
