@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class Graph {
 
     public static void main(String[] args) {
-        // Vertices
         String[] vertices = {"A", "B", "C", "D", "E", "F", "G", "H", "I"};
 
         int n = vertices.length;
