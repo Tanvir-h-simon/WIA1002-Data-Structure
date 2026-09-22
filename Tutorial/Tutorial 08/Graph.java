@@ -8,19 +8,18 @@ public class Graph {
 
         int n = vertices.length;
 
-        // Adjacency Matrix
-        int[][] matrix = new int[n][n];
+        int[][] adjMatrix = new int[n][n];
 
-        addEdge(matrix, 0, 2); // A -> C
-        addEdge(matrix, 0, 3); // A -> D
-        addEdge(matrix, 1, 3); // B -> D
-        addEdge(matrix, 2, 4); // C -> E
-        addEdge(matrix, 2, 5); // C -> F
-        addEdge(matrix, 3, 4); // D -> E
-        addEdge(matrix, 4, 6); // E -> G
-        addEdge(matrix, 5, 7); // F -> H
-        addEdge(matrix, 6, 7); // G -> H
-        addEdge(matrix, 7, 8); // H -> I
+        addEdge(adjMatrix, 0, 2); // A -> C
+        addEdge(adjMatrix, 0, 3); // A -> D
+        addEdge(adjMatrix, 1, 3); // B -> D
+        addEdge(adjMatrix, 2, 4); // C -> E
+        addEdge(adjMatrix, 2, 5); // C -> F
+        addEdge(adjMatrix, 3, 4); // D -> E
+        addEdge(adjMatrix, 4, 6); // E -> G
+        addEdge(adjMatrix, 5, 7); // F -> H
+        addEdge(adjMatrix, 6, 7); // G -> H
+        addEdge(adjMatrix, 7, 8); // H -> I
 
 
         System.out.println("Adjacency Matrix:");
@@ -35,7 +34,7 @@ public class Graph {
             System.out.print(vertices[i] + " ");
 
             for (int j = 0; j < n; j++) {
-                System.out.print(matrix[i][j] + " ");
+                System.out.print(adjMatrix[i][j] + " ");
             }
 
             System.out.println();
@@ -43,25 +42,25 @@ public class Graph {
 
         System.out.println("\nAdjacency List:");
 
-        ArrayList<ArrayList<String>> adjacencyList = new ArrayList<>();
+        ArrayList<ArrayList<String>> adjList = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
-            adjacencyList.add(new ArrayList<>());
+            adjList.add(new ArrayList<>());
         }
 
-        addEdge(adjacencyList, 0, "C");
-        addEdge(adjacencyList, 0, "D");
-        addEdge(adjacencyList, 1, "D");
-        addEdge(adjacencyList, 2, "E");
-        addEdge(adjacencyList, 2, "F");
-        addEdge(adjacencyList, 3, "E");
-        addEdge(adjacencyList, 4, "G");
-        addEdge(adjacencyList, 5, "H");
-        addEdge(adjacencyList, 6, "H");
-        addEdge(adjacencyList, 7, "I");
+        addEdge(adjList, 0, "C");
+        addEdge(adjList, 0, "D");
+        addEdge(adjList, 1, "D");
+        addEdge(adjList, 2, "E");
+        addEdge(adjList, 2, "F");
+        addEdge(adjList, 3, "E");
+        addEdge(adjList, 4, "G");
+        addEdge(adjList, 5, "H");
+        addEdge(adjList, 6, "H");
+        addEdge(adjList, 7, "I");
 
         for (int i = 0; i < n; i++) {
-            System.out.println(vertices[i] + " -> " + adjacencyList.get(i));
+            System.out.println(vertices[i] + " -> " + adjList.get(i));
         }
     }
 
